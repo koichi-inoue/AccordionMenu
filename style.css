@@ -1,87 +1,158 @@
 * {
   margin: 0;
   padding: 0;
-  list-style-type: none;
   text-decoration: none;
-  text-align:center;
+  list-style-type: none;
 }
 
 #container {
-  width: 400px;
-  margin: 0 auto;
+  width: 70%;
+  max-width: 640px;
+  margin: 2rem auto;
+  background: #EEE;
+  overflow: hidden;
 }
 
+/********* Header ********/
+
 header {
-  position:relative;
-  z-index: 999;
+  position: relative;
   background-color: #333;
-  padding: 2rem;
+  height: 6rem;
   box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
 }
 
 h1 {
-  font-size: 1.5rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.25rem;
   color: white;
 }
 
-#MenuButton {
-    background-color: #333;
+/* Navigation Button */
+
+.navButton {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  padding: 0.25rem;
+  border: 1px solid gray;
+  border-radius: 0.2rem;
+  text-align: center;
+  z-index: 999;
 }
 
-  #MenuButton a {
-    display: block;
-    padding: 0.5rem;
-    color: white;
-    font-size: 20px;
-  }
-
-#MenuList {
-  display: none;
+.navButton a {
+  color: #FFF;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
-  #MenuList .main {
-    background-color: #555;
-  }
 
-    #MenuList .main li {
-      border-bottom: dotted 1px gray;
-    }
+/********** Navigation *********/
 
-    #MenuList .main a {
-      display: block;
-      padding: 0.5rem;
-      color: white;
-    }
-
-  #MenuList .subs {
-    background-color: #DDD;
-  }
-
-    #MenuList .subs li {
-      border-bottom: dotted 1px gray;
-    }
-
-    #MenuList .subs a{
-      display: block;
-      padding: 0.5rem;
-      color: #222;
-    }
-
-    #MenuList .subs a:hover {
-      background-color: #333;
-      color: white;
-    }
-
-main {
-  padding: 2rem;
+nav {
+  position: relative;
 }
 
-main p{
+/* Menu Level-1 */
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+}
+
+.menu>li {
+  position: relative;
+  width: 100%;
+}
+
+.menu>li>a {
+  display: block;
+  width: 90%;
+  padding: 1rem 5%;
+  color: #FFF;
+  background-color: rgba(64,64,64,.8);
+  border-bottom: solid 1px #DDD;
+}
+
+.menu>li>a:hover {
+  background-color: #222;
+}
+
+.menu>li>a.dropButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  padding: 1rem 5%;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: none;
+}
+
+.menu>li>a.dropButton:hover {
+  color: #222;
+}
+
+.menu>li>a.dropButton.isClosed::after {
+  content: "＋";
+}
+
+.menu>li>a.dropButton.isOpen::after {
+  content: "ー";
+}
+
+/* Menu Level-2 */
+
+.menu-child {
+  /* Noting */
+}
+
+.menu-child>li {
+  position: relative;
+  width: 100%;
+}
+
+.menu-child>li>a {
+  display: block;
+  width: 90%;
+  padding: 1rem 5%;
+  color: #FFF;
+  background-color: rgba(128,128,128,.8);
+  border-bottom: solid 1px #DDD;
+}
+
+.menu-child>li>a:hover {
+  background-color: #222;
+}
+
+/******** Article ********/
+
+article {
+  padding: 3rem;
+}
+
+article p {
+  margin-bottom: 1rem;
   text-align: justify;
+  color: #555;
 }
+
+/******** Footer ********/
 
 footer {
   background-color: #333;
   padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
   color: white;
 }
