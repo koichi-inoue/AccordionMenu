@@ -3,7 +3,7 @@ $(function(){
   // Intialize
   $(".menu").hide();
   $(".menu-child").hide();
-  $('.menu>li').has('.menu-child').append('<a href="#" class="dropButton"></a>');
+  $('.menu>li').has('.menu-child').append('<span class="dropButton"></span>');
   $(".dropButton").addClass('isClosed');
 
   // Toggle navButton
