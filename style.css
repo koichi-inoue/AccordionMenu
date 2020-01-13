@@ -85,7 +85,7 @@ nav {
   background-color: #222;
 }
 
-.menu>li>a.dropButton {
+.dropButton {
   position: absolute;
   top: 0;
   right: 0;
@@ -99,15 +99,15 @@ nav {
   border: none;
 }
 
-.menu>li>a.dropButton:hover {
+.dropButton:hover {
   color: #222;
 }
 
-.menu>li>a.dropButton.isClosed::after {
+.dropButton.isClosed::after {
   content: "＋";
 }
 
-.menu>li>a.dropButton.isOpen::after {
+.dropButton.isOpen::after {
   content: "ー";
 }
 
