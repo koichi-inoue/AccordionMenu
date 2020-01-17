@@ -20,6 +20,7 @@ header {
   background-color: #333;
   height: 6rem;
   box-shadow: 0 4px 0.3125rem rgba(0,0,0,.3);
+  z-index: 99;
 }
 
 h1 {
@@ -78,7 +79,7 @@ nav {
   padding: 1rem 5%;
   color: #FFF;
   background-color: rgba(64,64,64,.8);
-  border-bottom: solid 1px #DDD;
+  border-top: solid 1px #999;
 }
 
 .menu>li>a:hover {
@@ -124,11 +125,11 @@ nav {
 
 .menu-child>li>a {
   display: block;
-  width: 90%;
-  padding: 1rem 5%;
+  width: 80%;
+  padding: 1rem 10%;
   color: #FFF;
   background-color: rgba(128,128,128,.8);
-  border-bottom: solid 1px #DDD;
+  border-top: solid 1px #BBB;
 }
 
 .menu-child>li>a:hover {
